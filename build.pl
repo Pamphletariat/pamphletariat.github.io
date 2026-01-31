@@ -1336,13 +1336,13 @@ sub render_pamphlet {
         $reader_warning_html = qq{\n  <p class="meta meta-reader-warning"><em>Note: $rw</em></p>};
     }
 
-    # Orientation (optional): paragraph immediately after reader warning on pamphlets.
+    # Orientation (optional): immediately after reader warning on pamphlets.
+    # NEW BEHAVIOR: treat frontmatter orientation as Markdown and transform to HTML.
     my $orientation_html = "";
     if (defined($p->{orientation}) && $p->{orientation} ne "") {
-        my $ab = html_escape($p->{orientation});
-        $orientation_html = qq{\n  <p class="meta meta-orientation"><span class="meta-label">Orientation:</span> $ab</p>};
+        my $orientation_body_html = md_to_html($p->{orientation});
+        $orientation_html = qq{\n  <div class="meta meta-orientation"><span class="meta-label">Orientation:</span>\n$orientation_body_html\n  </div>};
     }
-
     my $has_orientation_or_warning = (($orientation_html ne "") || ($reader_warning_html ne ""));
     my $pre_body_hr = $has_orientation_or_warning ? "\n  <hr>" : "";
 
@@ -1915,14 +1915,25 @@ sub md_to_html {
     return join "\n", @out;
 }sub md_inline {
     my ($t) = @_;
+
+    # Escape HTML first; we only add a small, controlled set of tags below.
     $t =~ s/&/&amp;/g;
     $t =~ s/</&lt;/g;
     $t =~ s/>/&gt;/g;
-    $t =~ s/\*\*(.*?)\*\*/<strong>$1<\/strong>/g;
-    $t =~ s/\*(.*?)\*/<em>$1<\/em>/g;
+
+    # Inline emphasis (minimal Markdown).
+    # Keep these patterns conservative so they don't misfire on stray asterisks.
+    # - Bold: **text** (non-empty; does not start/end with whitespace)
+    # - Italic: *text* (non-empty; does not start/end with whitespace; does not match **...**)
+
+    # Bold first.
+    $t =~ s/\*\*([^\s](?:.*?[^\s])?)\*\*/<strong>$1<\/strong>/g;
+
+    # Italic: avoid matching ** by requiring the surrounding * not be adjacent to another *.
+    $t =~ s/(?<!\*)\*([^\s](?:.*?[^\s])?)\*(?!\*)/<em>$1<\/em>/g;
+
     return $t;
 }
-
 sub emit_static_pages {
     return unless -d $PAGES_DIR;
 

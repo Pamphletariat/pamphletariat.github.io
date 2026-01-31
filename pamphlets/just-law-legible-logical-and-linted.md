@@ -3,13 +3,13 @@ title: Just Law: Legible, Logical, and Linted
 author_namespace: github
 author: reggulus
 date: 2026-01-31
-domain: Law & Constition
+domain: Law & Constitution
 related_domains:
 - Legitimacy & Authority
 - Systems & Failure
 subject: Rule of Law
 reading_level: general
-orientation: This is a structural argument about what a legal system must be like to count as a rule of law system: it treats law as public, checkable guidance that must let ordinary people determine legality in advance, rather than learning it only after enforcement, delay, or interpretation. It is deliberately not a theory of ideal policy outcomes, a partisan program, or a comprehensive account of moral justice; it does not tell you what the law should *aim* at, only what the law must be able to *state* and *compute* if it is going to coerce. You should trust the frame because it is testable at the level of system behavior (can a person, given the facts and the published rules, determine legality prospectively?), and because it allocates drafting failure costs away from the public: if the state cannot specify and compose its commands determinately, coercion cannot attach.
+orientation: This is a structural argument about what a legal system must be like to count as a Rule of Law system: it treats law as public, checkable guidance that must let ordinary people determine legality in advance, rather than learning it only after enforcement, delay, or interpretation. It is deliberately not a theory of ideal policy outcomes, a partisan program, or a comprehensive account of moral justice; it does not tell you what the law should *aim* at, only what the law must be able to *state* and *compute* if it is going to coerce. You should trust the frame because it is testable at the level of system behavior (can a person, given the facts and the published rules, determine legality prospectively?), and because it allocates drafting failure costs away from the public: if the state cannot specify and compose its commands determinately, coercion cannot attach.
 ---
 
 ## 1. The Everyday Problem (Phenomenology)
@@ -25,7 +25,7 @@ This is corrosive. When everyone is plausibly in violation and enforcement is se
 
 ## 2. The Category Error in Legal Debate
 
-Most legal debate—especially in legal philosophy—fixates on *outcomes*: fairness, rights, and how benefits and burdens should be distributed. But those arguments typically assume that the basic rule-of-law machinery already works: that the system can tell ordinary people, ahead of time, what is lawful and what is not. The poorly addressed, and more foundational, question is what a legal system must satisfy to *qualify* as a Rule of Law system in the first place. If the substrate produces indeterminate legality—if people cannot determine legality in advance because meaning is supplied later by interpretation, enforcement discretion, or delay—then downstream justice analysis becomes incoherent.
+Most legal debate—especially in legal philosophy—fixates on *outcomes*: fairness, rights, and how benefits and burdens should be distributed. But those arguments typically assume that the basic Rule of Law machinery already works: that the system can tell ordinary people, ahead of time, what is lawful and what is not. The poorly addressed, and more foundational, question is what a legal system must satisfy to *qualify* as a Rule of Law system in the first place. If the substrate produces indeterminate legality—if people cannot determine legality in advance because meaning is supplied later by interpretation, enforcement discretion, or delay—then downstream justice analysis becomes incoherent.
 
 You cannot build an edifice without a foundation.
 
@@ -34,22 +34,22 @@ You cannot build an edifice without a foundation.
 
 A legal system is not only the statutes a legislature passes. It is the whole operating corpus that actually governs conduct: statutes together with the regulations, implementing rules, guidance that carries binding effect, and the enforcement structure that makes those rules real in practice. If the day-to-day meaning of “the law” depends on what agencies later invent, or on what enforcement actors supply at runtime, then the system’s coercive power is being exercised by something other than publicly stated rules.
 
-For that reason, **rule of law is a system property**, not a mood, a tradition, or a slogan. It is not satisfied by having courts, or by having written statutes, or by sincere rhetoric about fairness. It is satisfied only when legality is a determinate function of (a) the relevant facts and (b) the system’s enacted, public rules—statutes and regulations together. In such a system, a person who knows the material facts can, in principle, determine whether a contemplated action is lawful before acting.
+For that reason, **Rule of Law is a system property**, not a mood, a tradition, or a slogan. It is not satisfied by having courts, or by having written statutes, or by sincere rhetoric about fairness. It is satisfied only when legality is a determinate function of (a) the relevant facts and (b) the system’s enacted, public rules—statutes and regulations together. In such a system, a person who knows the material facts can, in principle, determine whether a contemplated action is lawful before acting.
 
 If legality cannot be determined in advance—if it becomes clear only after an encounter with an agency, an officer, or a judge—then the system has failed at the level that matters. That failure is not merely “hard cases at the margin.” It is evidence that the system is operating with indeterminate rules and is substituting discretion and delay for public guidance.
 
 This also clarifies what courts are for. Courts exist to resolve disputes about facts—what happened, what was intended, what was known, and what the evidence supports—rather than to manufacture the meaning of unclear rules after the fact. When adjudication becomes a routine repair mechanism for vague drafting, the system is no longer applying law; it is improvising it.
 
-A legal system therefore cannot claim the rule-of-law mantle while tolerating rules that cannot be stated unambiguously enough to make legality determinate. If the system cannot specify its obligations and prohibitions in a way that can be known, checked, and applied, then it may still be a regime of power—but it is not rule of law.
+A legal system therefore cannot claim the Rule of Law mantle while tolerating rules that cannot be stated unambiguously enough to make legality determinate. If the system cannot specify its obligations and prohibitions in a way that can be known, checked, and applied, then it may still be a regime of power—but it is not Rule of Law.
 
 
 ## 4. System-Level Requirements for a Just Rule of Law
 
-> These are **global properties** the legal system must satisfy. They describe *what must be true* of the system, independent of how those properties are enforced.
+These are **global properties** the legal system must satisfy. They describe *what must be true* of the system, independent of how those properties are enforced.
 
 ### 4.1 Prospective Knowability
 
-A rule-of-law system must allow ordinary people to know, in advance, whether a planned action is lawful. “Lawful” cannot be a status that becomes clear only after an encounter with an agency, an officer, or a court. That requires laws and regulations that are defined, non-conflicting, and logically composable—so that the legal consequences of conduct are determinable from the text, not manufactured later through interpretation.
+A Rule of Law system must allow ordinary people to know, in advance, whether a planned action is lawful. “Lawful” cannot be a status that becomes clear only after an encounter with an agency, an officer, or a court. That requires laws and regulations that are defined, non-conflicting, and logically composable—so that the legal consequences of conduct are determinable from the text, not manufactured later through interpretation.
 
 Prospective knowability also requires that rules be self-executing in the specific sense relevant here: if the facts are not in dispute, legality (and other legally decisive outcomes) must not depend on discretionary approvals, open-ended standards, interpretive improvisation, or delays that force people to act first and learn later. If a person must guess how an official will read a phrase, weigh a factor, or “apply the spirit,” the system has failed the basic promise that law can guide conduct.
 
@@ -61,7 +61,7 @@ In practical terms, uncertainty must block enforcement rather than excuse it. If
 
 ### 4.3 Bounded Complexity
 
-Even perfectly defined rules can become unusable if the total body of law grows beyond what humans can realistically navigate. A rule-of-law system therefore requires an explicit complexity bound: the legal corpus must remain within human cognitive limits, such that an ordinary person (with accessible tools) can discover and apply the rules that govern their conduct.
+Even perfectly defined rules can become unusable if the total body of law grows beyond what humans can realistically navigate. A Rule of Law system therefore requires an explicit complexity bound: the legal corpus must remain within human cognitive limits, such that an ordinary person (with accessible tools) can discover and apply the rules that govern their conduct.
 
 This constraint must be structural, not cosmetic. It cannot be measured by raw page or word counts that can be gamed; it must track the real decision structure of the law—its branching conditions, exceptions, and precedence relationships. All statutory and regulatory rules count against this bound, because both function as coercive rules in practice.
 
@@ -71,7 +71,7 @@ This constraint must be structural, not cosmetic. It cannot be measured by raw p
 
 These requirements cannot be satisfied by aspiration alone. If they are merely stated, they will be violated in the ordinary course of politics and administration—through delegation, drafting shortcuts, “to be determined” standards, and interpretive improvisation. A system that permits structurally invalid law to be enacted will reliably produce indeterminate legality, no matter how noble its rhetoric.
 
-A just rule-of-law system therefore needs systemic protection built in: a design-time gate that prevents violations from entering the legal corpus in the first place. The point is not to punish bad drafting (or the public) after the fact, but to make structurally invalid law non-passable. Only in this way can coercion never attach to rules that cannot be known, checked, and applied as law.
+A just Rule of Law system therefore needs systemic protection built in: a design-time gate that prevents violations from entering the legal corpus in the first place. The point is not to punish bad drafting (or the public) after the fact, but to make structurally invalid law non-passable. Only in this way can coercion never attach to rules that cannot be known, checked, and applied as law.
 
 
 
@@ -79,7 +79,7 @@ A just rule-of-law system therefore needs systemic protection built in: a design
 
 **Purpose of linting:** To mechanically enforce the system-level requirements in Section 4 *before* coercive law exists.
 
-Section 4 describes global properties a legal system must have if it is to count as rule-of-law compatible with justice. Section 5 names the enforcement mechanism that makes those properties real at design time rather than aspirational at runtime: **linting**. The core idea is simple: if a draft rule cannot be stated in a way that makes legality determinate and knowable, then coercion may not attach to it—and the system should prevent it from becoming law in the first place.
+Section 4 describes global properties a legal system must have if it is to count as Rule of Law compatible with justice. Section 5 names the enforcement mechanism that makes those properties real at design time rather than aspirational at runtime: **linting**. The core idea is simple: if a draft rule cannot be stated in a way that makes legality determinate and knowable, then coercion may not attach to it—and the system should prevent it from becoming law in the first place.
 
 ### 5.1 What a Linter Is (in plain terms)
 
@@ -162,7 +162,7 @@ Linting does not eliminate courts. It changes what courts are *for*. Courts rema
 
 Judges and juries still exercise human judgment where human judgment is unavoidable: assessing credibility, weighing evidence, determining intent, deciding guilt by the relevant standard, and (where the system allows it) selecting punishments within defined ranges. That discretion is legitimate because it operates on *facts and sentencing choices*, not on the meaning of the law itself.
 
-What a rule-of-law system cannot permit is using adjudication as a repair mechanism for underspecified drafting. Courts may not supply missing definitions, patch contradictions, or reinterpret vague phrases into enforceable commands after the fact. If a statute cannot be applied without a judge inventing a definition, creating an exception, or choosing among incompatible readings, the failure was upstream, at the moment of enactment. That is no longer allowed.
+What a Rule of Law system cannot permit is using adjudication as a repair mechanism for underspecified drafting. Courts may not supply missing definitions, patch contradictions, or reinterpret vague phrases into enforceable commands after the fact. If a statute cannot be applied without a judge inventing a definition, creating an exception, or choosing among incompatible readings, the failure was upstream, at the moment of enactment. That is no longer allowed.
 
 For the same reason, legislative intent, policy goals, or a court’s view of what would be “just” in the abstract cannot be used to override or rewrite the enacted rule. Those considerations belong at drafting time, when the public can see and contest them and when the linter can reject laws that cannot be made determinate. Adjudication is for applying admissible rules to proven facts—not for manufacturing lawful meaning retroactively.
 
@@ -175,7 +175,7 @@ Once a legal corpus is limited to admissible (linted) law—defined terms, expli
 
 In practice, this means a citizen can describe a planned action in ordinary language and then supply whatever additional facts the rules actually depend on. Where the law branches, the system can ask branching questions (“Are you under 18?”, “Is the location one of the enumerated places?”, “Is the time between 22:00 and 05:00?”, “Does exception (a) apply or (b)?”) and generate an immediate legality determination with a traceable explanation. The output is not an improvised advisory opinion; it is a reasoned report that cites the governing provisions, shows which conditions were satisfied, and identifies which exceptions or precedence rules controlled.
 
-For this to matter as rule-of-law infrastructure, the system must also provide a **safe harbor**: if a person provides true factual inputs and reasonably relies on the system’s legality report, that reliance must provide binding protection. Otherwise “queryability” becomes mere convenience while enforcement remains a trap. A rule-of-law system cannot demand prospective compliance while reserving the right to punish people who acted in good faith on the best official determination available at the time.
+For this to matter as Rule of Law infrastructure, the system must also provide a **safe harbor**: if a person provides true factual inputs and reasonably relies on the system’s legality report, that reliance must provide binding protection. Otherwise “queryability” becomes mere convenience while enforcement remains a trap. A Rule of Law system cannot demand prospective compliance while reserving the right to punish people who acted in good faith on the best official determination available at the time.
 
 This is the practical expression of prospective knowability. Determinacy that exists only in principle—locked behind expert gatekeeping, high fees, delay, or discretionary interpretation—fails its purpose. If ordinary people cannot access legality as a usable answer in advance, then the system has not actually delivered the guiding function that law is supposed to serve.
 
@@ -201,9 +201,9 @@ When legality is indeterminate, the system does not become neutral; it becomes s
 
 This unpredictability is not a technical inconvenience; it is a human constraint. A person cannot plan a business, a family decision, a protest, a building project, or sometimes even a livelihood under a regime where “legal” is a moving target. Planning collapses into caution; creativity collapses into permission-seeking; ordinary life becomes contingent on avoiding attention. Human flourishing requires a stable surface to stand upon.
 
-**Unknowable law functions as coercion without meaningful consent.** If the public cannot determine what the law demands until after the system acts against them, then “compliance” is no longer voluntary adherence to public rules; it is submission to unpredictable force. And a system that relies on discretionary repair by officials—rather than on rules that are complete, explicit, and checkable at the moment of enactment—cannot credibly claim the rule of law. It is, instead, rule by interpretation, rule by exception, and rule by delay.
+**Unknowable law functions as coercion without meaningful consent.** If the public cannot determine what the law demands until after the system acts against them, then “compliance” is no longer voluntary adherence to public rules; it is submission to unpredictable force. And a system that relies on discretionary repair by officials—rather than on rules that are complete, explicit, and checkable at the moment of enactment—cannot credibly claim the Rule of Law. It is, instead, rule by interpretation, rule by exception, and rule by delay.
 
 ## Closing Axiom
 
-* **Justice is downstream of rule of law.**
-* **Rule of law is downstream of determinacy.**
+* **Justice is downstream of Rule of Law.**
+* **Rule of Law is downstream of determinacy.**
