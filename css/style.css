@@ -361,3 +361,9 @@ article.pamphlet h1 {
   font-weight: 400;
   font-size: inherit;
 }
+
+/* Notes */
+.note {
+    margin: 2rem 0 2rem 2rem;
+    color: var(--fg-muted);
+}

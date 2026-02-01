@@ -5,7 +5,7 @@
 1. responses: none idea + historical connections
 1. review geography on pamphlets
 1. cleanup link styles
-1. browse page orientation paragraphs
+1. browse pages orientation paragraphs
 1. about page? technical about?
 1. Donation link
 1. How to help process
@@ -23,7 +23,6 @@ include title, author/pseudonym, datePublished, description, canonical url
 ## Future
 
 1. New subject and author feeds
-1. add sitemap.xml?
 1. live search
 1. browse by geography
 1. deal with long browse pages
