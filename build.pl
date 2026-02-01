@@ -15,6 +15,7 @@ use File::Spec;
 # CONFIG
 # -------------------------
 
+my $SITE_URL = "https://www.pamphletariat.org";
 my $CONTENT_DIR = "pamphlets";
 my $PAGES_DIR = "content/pages";
 my $OUT_DIR     = "dist";
@@ -195,6 +196,9 @@ sub emit_pages {
 
     # Feeds (global + per index pages)
     emit_all_feeds();
+
+    # Search engine sitemap (reflects actual built pages under dist/)
+    emit_sitemap();
 }
 # -------------------------
 # FEEDS (RSS 2.0 + Atom)
@@ -203,7 +207,7 @@ sub emit_pages {
 sub site_base_url {
     # Prefer explicit base URL via env var for absolute feed URLs.
     # Example: SITE_URL=https://pamphletariat.example
-    my $u = $ENV{SITE_URL} // "";
+    my $u = $SITE_URL // "";
     $u =~ s/\/$//;
     return $u;
 }
@@ -247,6 +251,72 @@ sub abs_url {
     return $base . $path;
 }
 
+sub sitemap_abs_url {
+    my ($path) = @_;
+    my $base = site_base_url();
+
+    # Sitemaps are typically expected to use absolute URLs.
+    # If SITE_URL is not set, fall back to root-relative paths.
+    return $path if !$base;
+    return $base . $path;
+}
+
+sub emit_sitemap {
+    # Build a sitemap from what actually exists in $OUT_DIR.
+    # - Include HTML pages only
+    # - Prefer directory roots as /foo/ rather than /foo/index.html
+    # - Exclude non-pages (feeds/assets)
+
+    my @urls;
+
+    find(
+        {
+            wanted => sub {
+                my $from = $File::Find::name;
+                return if -d $from;
+
+                # Only include HTML outputs.
+                return unless $from =~ /\.html\z/;
+
+                # Compute path relative to dist/
+                my $rel = $from;
+                $rel =~ s/^\Q$OUT_DIR\E\/?//;
+
+                # Skip hidden/odd paths (defensive)
+                return if $rel =~ /^\./;
+
+                my $loc;
+                if ($rel eq "index.html") {
+                    $loc = "/";
+                } elsif ($rel =~ m{\A(.+)/index\.html\z}) {
+                    $loc = "/$1/";
+                } else {
+                    $loc = "/$rel";
+                }
+
+                push @urls, $loc;
+            },
+            no_chdir => 1,
+        },
+        $OUT_DIR
+    );
+
+    # Stable ordering.
+    @urls = sort @urls;
+
+    my @out;
+    push @out, qq{<?xml version="1.0" encoding="UTF-8"?>};
+    push @out, qq{<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">};
+
+    for my $u (@urls) {
+        my $loc = xml_escape(sitemap_abs_url($u));
+        push @out, qq{  <url><loc>$loc</loc></url>};
+    }
+
+    push @out, qq{</urlset>};
+
+    write_file("$OUT_DIR/sitemap.xml", join("\n", @out) . "\n");
+}
 sub xml_escape {
     my ($s) = @_;
     $s //= "";
