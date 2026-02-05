@@ -1106,7 +1106,7 @@ $recent_right
 };
     write_file(
         "$OUT_DIR/index.html",
-        wrap_layout("Pamphletariat", $inner, is_home => 1)
+        wrap_layout("Pamphletariat", $inner, is_home => 1, canonical_path => "/")
     );
 }sub emit_pamphlet_pages {
     my $dir = "$OUT_DIR/pamphlets";
@@ -1115,11 +1115,10 @@ $recent_right
     for my $p (@pamphlets) {
         write_file(
             "$dir/$p->{slug}.html",
-            wrap_layout($p->{title}, render_pamphlet($p))
+            wrap_layout($p->{title}, render_pamphlet($p), canonical_path => "/pamphlets/$p->{slug}.html")
         );
     }
-}
-sub emit_index_group {
+}sub emit_index_group {
     my ($name, $index) = @_;
     my $dir = "$OUT_DIR/$name";
     make_path($dir);
@@ -1153,9 +1152,8 @@ sub emit_index_group {
     }
     write_file(
         "$dir/index.html",
-        wrap_layout(ucfirst($name), render_index_landing($name, \@keys))
-    );
-    for my $k (@keys) {
+        wrap_layout(ucfirst($name), render_index_landing($name, \@keys), canonical_path => "/$name/")
+    );    for my $k (@keys) {
         my $items = $index->{$k};
         my $slug  = slugify($k);
 
@@ -1237,13 +1235,13 @@ sub emit_index_group {
 
             write_file(
                 "$dir/$slug.html",
-                wrap_layout($page_title, $inner)
+                wrap_layout($page_title, $inner, canonical_path => "/$name/$slug.html")
             );
             next;
         }
         write_file(
             "$dir/$slug.html",
-            wrap_layout(ucfirst($name) . ": $k", $inner)
+            wrap_layout(ucfirst($name) . ": $k", $inner, canonical_path => "/$name/$slug.html")
         );
     }
 }# -------------------------
@@ -1731,6 +1729,19 @@ sub wrap_layout {
     my ($title, $content, %opts) = @_;
     my $is_home = $opts{is_home} // 0;
 
+    # Canonical URL
+    # Determine the output path being written so we can emit a stable canonical URL.
+    # Supported callers can pass:
+    #   canonical_path => "/foo/" | "/pamphlets/bar.html" | "/"
+    # If omitted, fall back to "" (no canonical tag) rather than guessing.
+    my $canonical_path = $opts{canonical_path} // "";
+    my $canonical_tag  = "";
+    if (defined($canonical_path) && $canonical_path ne "") {
+        my $abs = abs_url($canonical_path);
+        my $href = html_escape($abs);
+        $canonical_tag = qq{<link rel="canonical" href="$href">\n};
+    }
+
     my $header = "";
     unless ($is_home) {
         $header = qq{
@@ -1755,7 +1766,7 @@ sub wrap_layout {
 <head>
 <meta charset="utf-8">
 <title>$title</title>
-<link rel="stylesheet" href="/css/style.css">
+$canonical_tag<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 $header
@@ -1766,8 +1777,7 @@ $footer
 </body>
 </html>
 };
-}
-# -------------------------
+}# -------------------------
 # FILE OPS
 # -------------------------
 
@@ -2044,9 +2054,9 @@ sub emit_static_pages {
 
                 my $html = wrap_layout(
                     $title,
-                    $page_inner
+                    $page_inner,
+                    canonical_path => "/$slug/"
                 );
-
                 my $dir = "$OUT_DIR/$slug";
                 make_path($dir);
                 write_file("$dir/index.html", $html);
